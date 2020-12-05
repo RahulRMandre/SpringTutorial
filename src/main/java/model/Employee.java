@@ -4,6 +4,7 @@ public class Employee {
     int eId;
     String eName;
     int eSalary;
+    Address address;
 
     public Employee(int eId, String eName, int eSalary) {
         this.eId = eId;
@@ -11,8 +12,8 @@ public class Employee {
         this.eSalary = eSalary;
     }
 
-    public Employee() {
-
+    public Employee(Address address) {
+    	this.address=address;
     }
 
     public int getEId() {
@@ -45,6 +46,18 @@ public class Employee {
                 "eiId=" + eId +
                 ", eName='" + eName + '\'' +
                 ", eSalary=" + eSalary +
+                ", address=" + address +
                 '}';
     }
+    
+    public void init() {
+    	System.out.println("init");
+    }
+    
+    public void destroy() {
+    	System.out.println("destroy");
+    }
+
+    
+    
 }

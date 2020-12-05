@@ -7,10 +7,15 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="employee"    class="model.Employee">
+    <bean id ="address" class="model.Address" init-method="init" destroy-method="destroy">
+    <property name="pin" value="580030"/>
+    <property name="address" value="hubli"/>
+    </bean>
+    <bean id="employee"    class="model.Employee" init-method="init" destroy-method="destroy">
         <property name="eId" value="0"/>
         <property name="eName" value="John Doe"/>
         <property name="eSalary" value="9000"/>
+        <constructor-arg ref="address"/>
     </bean>
 
 

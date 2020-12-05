@@ -8,5 +8,7 @@ public class Client {
     ApplicationContext context=new ClassPathXmlApplicationContext("config.xml");
         Employee employee=(Employee) context.getBean("employee");
         System.out.println(employee);
+        ClassPathXmlApplicationContext c=(ClassPathXmlApplicationContext)context;
+        c.close();
     }
 }
